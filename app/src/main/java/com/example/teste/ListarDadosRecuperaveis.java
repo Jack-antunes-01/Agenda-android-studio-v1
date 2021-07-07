@@ -47,7 +47,7 @@ import java.util.List;
 
 public class ListarDadosRecuperaveis extends Fragment {
 
-    private static final String url = "jdbc:mysql://108.179.253.78:3306/dreco836_prjAgenda?characterEncoding=latin1&zeroDateTimeBehavior=convertToNull";
+    private static final String url = "YOUR_URL";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
