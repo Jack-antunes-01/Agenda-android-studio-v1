@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="top|end"
+        android:backgroundTint="@color/base_normal"
+        app:srcCompat="@drawable/ic_pen"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/base_normal"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@color/white" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="30dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="80dp"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <com.facebook.login.widget.ProfilePictureView
+                android:id="@+id/friendProfilePicture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                xmlns:facebook="http://schemas.android.com/apk/res-auto" />
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@mipmap/ic_jack"
+                />
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/profileFontTitle"
+                android:text="Jackson Antunes \n(Dono da MyDiary)"
+                android:textColor="@color/base_normal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    app:srcCompat="@mipmap/ic_cegonha" />
+
+                <TextView
+                    android:id="@+id/profileBirthDate"
+                    android:textSize="@dimen/profileFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="24/01/2001"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#FDFDFD"
+                    android:backgroundTint="#FFFFFF"
+                    app:srcCompat="@mipmap/ic_contacts" />
+
+                <TextView
+                    android:textSize="@dimen/profileFontTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Contato"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    app:srcCompat="@mipmap/ic_email" />
+
+                <TextView
+                    android:id="@+id/profileEmail"
+                    android:textSize="@dimen/profileFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="jackson.contato24@hotmail.com"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    app:srcCompat="@mipmap/ic_telephone" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profilePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="34 99220-9380"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal" >
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/whatsappImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@mipmap/ic_whatsapp" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profileWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="34 99220-9380"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/telegramImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@mipmap/ic_telegram" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profileTelegram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="34 99220-9380"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <View style="@style/Divider"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#FDFDFD"
+                    android:backgroundTint="#FFFFFF"
+                    app:srcCompat="@mipmap/ic_network" />
+
+                <TextView
+                    android:textSize="@dimen/profileFontTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Redes sociais"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/facebookImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@mipmap/ic_facebook_round" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profileFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="facebook.com/jack_antunes01"
+                    android:textColor="@color/base_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/twitterImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@mipmap/ic_twitter" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profileTwitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="twitter.com/jack_antunes01"
+                    android:textColor="@color/base_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/instagramImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@mipmap/ic_instagram_round" />
+
+                <TextView
+                    android:textSize="@dimen/profileFont"
+                    android:id="@+id/profileInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="instagram.com/jack_antunes01"
+                    android:textColor="@color/base_normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

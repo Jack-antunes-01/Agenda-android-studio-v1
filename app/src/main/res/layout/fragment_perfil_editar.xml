@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/highlight_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveEditarProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/base_normal"
+        app:backgroundTint="#FFFFFF"
+        app:borderWidth="1dp"
+        app:srcCompat="@drawable/ic_salvar_arquivo"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackEditarProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/base_normal"
+        app:backgroundTint="#FFFFFF"
+        app:borderWidth="1dp"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="50dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="80dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.facebook.login.widget.ProfilePictureView
+                    android:id="@+id/fotoPerfilUsuarioFacebook"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    xmlns:facebook="http://schemas.android.com/apk/res-auto" />
+
+                <ImageView
+                    android:id="@+id/fotoPerfilUsuario"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/alterarFotoPerfilUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/base_normal"
+                    android:text="Alterar foto"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Nome *" />
+                <EditText
+                    android:id="@+id/cadNameEditarProfile"
+                    android:maxLength="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/base_normal"
+                    android:hint="Nome do contato.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Apelido" />
+                <EditText
+                    android:id="@+id/cadNicknameEditarProfile"
+                    android:maxLength="20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/base_normal"
+                    android:hint="Apelido do contato.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Celular *" />
+                <EditText
+                    android:id="@+id/cadPhoneEditarProfile"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/base_normal"
+                    android:hint="99 99999-9999.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Whatsapp" />
+                <EditText
+                    android:id="@+id/cadWhatsappEditarProfile"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="99 99999-9999.."
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Telegram" />
+                <EditText
+                    android:id="@+id/cadTelegramEditarProfile"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="99 99999-9999.."
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Data de nascimento" />
+                <EditText
+                    android:id="@+id/cadDtNascEditarProfile"
+                    android:maxLength="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="99/99/9999.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Facebook" />
+                <EditText
+                    android:id="@+id/cadFacebookEditarProfile"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="facebook.com/MyDiary.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Twitter" />
+                <EditText
+                    android:id="@+id/cadTwitterEditarProfile"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="twitter.com/MyDiary.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:text="Instagram" />
+                <EditText
+                    android:id="@+id/cadInstagramEditarProfile"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/base_normal"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="instagram.com/MyDiary.." />
+
+                <Button
+                    android:id="@+id/cadBtnRegisterEditarProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/base_normal"
+                    android:paddingVertical="12dp"
+                    android:textSize="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="SALVAR"
+                    android:layout_gravity="center"
+                    app:cornerRadius="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

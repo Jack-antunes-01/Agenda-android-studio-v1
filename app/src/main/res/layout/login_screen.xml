@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_primary_dark"
+    android:orientation="vertical"
+    tools:context=".ui.TelaDeLogin.LoginFragment">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#3700B3"
+        android:src="@mipmap/ic_logo_app" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="E-mail" />
+            <EditText
+                android:id="@+id/eEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_rounded_corners"
+                android:textColorHint="@android:color/darker_gray"
+                android:hint="Digite seu email.." />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Senha" />
+            <EditText
+                android:id="@+id/ePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_rounded_corners"
+                android:textColorHint="@android:color/darker_gray"
+                android:hint="******"
+                android:inputType="textPassword"
+                />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFB300"
+                android:layout_marginTop="20dp"
+                android:text="Entrar"
+                android:paddingVertical="12dp"
+                android:layout_gravity="center"
+                app:cornerRadius="5dp" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFB300"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="20dp"
+                android:text="Cadastrar"
+                android:layout_gravity="center"
+                app:cornerRadius="5dp" />
+
+            <TextView
+                android:id="@+id/attemptsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Ou se preferir"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                facebook:com_facebook_login_text="Entrar com Facebook"
+                facebook:com_facebook_logout_text="Realizar logout"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                />
+
+<!--            <ImageButton-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:backgroundTint="#3700B3"-->
+<!--                android:src="@mipmap/ic_facebook_round"-->
+<!--                />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnExit"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:backgroundTint="#FFB300"-->
+    <!--            android:text="Finalizar"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            app:cornerRadius="5dp" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

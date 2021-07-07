@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.teste.ui.FragmentoInicial.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/home">
+        <action
+            android:id="@+id/navigateToContactsProfile"
+            app:destination="@id/nav_contacts_profile" />
+        <action
+            android:id="@+id/navigateToAddContacts"
+            app:destination="@id/nav_add_contact" />
+        <argument
+            android:name="ra"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile"
+            app:popUpTo="@id/nav_home" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_home_to_listExcludedPeople"
+            app:destination="@id/listExcludedPeople" />
+        <action
+            android:id="@+id/action_nav_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_listarDadosRecuperaveis"
+            app:destination="@id/listarDadosRecuperaveis" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.teste.ui.FragmentoPerfil.ProfileFragment"
+        android:label="Meu perfil"
+        tools:layout="@layout/profile">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_profile_to_perfil_editar"
+            app:destination="@id/perfil_editar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contacts_profile"
+        android:name="com.example.teste.ui.Contatos.ContatosPerfil"
+        android:label="Contato"
+        tools:layout="@layout/contatos_perfil" >
+        <action
+            android:id="@+id/navigateFromContactsProfileToHome"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_nav_contacts_profile_to_nav_add_contact"
+            app:destination="@id/nav_add_contact" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_contact"
+        android:name="com.example.teste.ui.Contatos.ContatosCadastro"
+        android:label="Novo contato"
+        tools:layout="@layout/contatos_cadastro" >
+        <action
+            android:id="@+id/navigateFromAddContactsToHome"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_add_contact_to_nav_contacts_profile"
+            app:destination="@id/nav_contacts_profile"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="ra"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.teste.ui.TelaDeLogin.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/login_screen" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.teste.ui.TelaDeCadastro.RegisterFragment"
+        android:label="Cadastrar-se"
+        tools:layout="@layout/register_screen"/>
+    <fragment
+        android:id="@+id/perfil_editar"
+        android:name="com.example.teste.ui.FragmentoPerfil.ProfileEditFragment"
+        android:label="fragment_perfil_editar">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listExcludedPeople"
+        android:name="com.example.teste.ExcludedPeopleFragment"
+        android:label="fragment_list_excluded_people"
+        tools:layout="@layout/list_excluded_people" >
+        <argument
+            android:name="ra"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listarDadosRecuperaveis"
+        android:name="com.example.teste.ListarDadosRecuperaveis"
+        android:label="fragment_listar_dados_recuperaveis"
+        tools:layout="@layout/list_recuperable_data" >
+        <argument
+            android:name="ra"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/settingsSyncData"
+        android:orderInCategory="1"
+        android:title="@string/sync_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settingsListDeletedData"
+        android:orderInCategory="2"
+        android:title="@string/list_deleted_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settingsListRecuperableData"
+        android:orderInCategory="3"
+        android:title="@string/list_recuperable_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settingsCleanExcludedPeople"
+        android:orderInCategory="4"
+        android:title="Limpar excluídos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settingsTransferirContato"
+        android:orderInCategory="5"
+        android:title="Transferir contato"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="6"
+        android:title="Sair"
+        app:showAsAction="never" />
+
+</menu>
