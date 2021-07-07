@@ -65,7 +65,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private static final String url = "jdbc:mysql://108.179.253.78:3306/dreco836_prjAgenda?characterEncoding=latin1";
+    private static final String url = "YOUR_URL";
     private static final int WIFI_STATE = 5;
     private static final int REQUEST_ENABLE_BT = 6;
     private ArrayList<Contatos> listItem = new ArrayList<>();
@@ -327,8 +327,8 @@ public class HomeFragment extends Fragment {
                 args = HomeFragmentArgs.fromBundle(getArguments());
                 String ra = args.getRa();
                 ResultSet rs;
-                String usuarioDb = "dreco836_amigos";
-                String senhaDb = "amigos2021";
+                String usuarioDb = "YOUR_USER";
+                String senhaDb = "YOUR_PASSWORD";
 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection(url, usuarioDb, senhaDb);
